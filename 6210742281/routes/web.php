@@ -13,12 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
     return view('pages.index');
+});
+
+Route::get('/admin/dashboard', function () {
+    return view('pages.layout-static');
+});
+
+Route::get('/admin/main', function () {
+    return view('pages.main');
 });
 
 Auth::routes();
