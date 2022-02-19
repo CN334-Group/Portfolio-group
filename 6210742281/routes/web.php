@@ -13,18 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+Route::get('/', 'App\Http\Controllers\PagesController@index')->name('home');
 
-Route::get('/admin/dashboard', function () {
-    return view('pages.layout-static');
-});
+Route::get('/admin/dashboard', 'App\Http\Controllers\PagesController@dashboard')->name('home');
+// Route::get('/admin/dashboard', function () {
+//     return view('pages.dashboard');
+// });
 
-Route::get('/admin/main', function () {
-    return view('pages.main');
-});
+// Route::get('/admin/main', function () {
+//     return view('pages.main');
+// });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

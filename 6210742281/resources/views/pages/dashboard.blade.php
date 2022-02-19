@@ -7,7 +7,6 @@
                 <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                 <li class="breadcrumb-item active">Dashboard</li>
             </ol>
-            <h2>hello</h2>
         </div>
     </main>
 @endsection
