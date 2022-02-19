@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Portfolio Dashboard</title>
-    <link href="{{ asset('css/dashboard_styles.css') }}" rel="stylesheet" />
+    <link href="{{asset('css/dashboard_styles.css')}}" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 
@@ -48,7 +48,7 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <a class="nav-link" href="{{route('pages.dashboard')}}">
+                        <a class="nav-link" href="{{route('admin.dashboard')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
@@ -64,7 +64,7 @@
                                     <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                                 </nav>
                             </div> -->
-                        <a class="nav-link" href="{{route('pages.main')}}">
+                        <a class="nav-link" href="{{route('admin.main')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                             Main
                         </a>
@@ -118,7 +118,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
-    <script src="{{ asset('js/dashboard.js') }}"></script>
+    <script src="{{asset('js/dashboard.js')}}"></script>
 </body>
 
 </html>
