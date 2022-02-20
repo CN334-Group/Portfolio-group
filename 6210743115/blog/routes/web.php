@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('StoreInd.index');
-});
+Route::get('/', [App\Http\Controllers\Pagecontroller::class, 'index'])->name('home');
+Route::get('/admin/dashboard', [App\Http\Controllers\Pagecontroller::class, 'dashboard'])->name('admin.dashboard');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
