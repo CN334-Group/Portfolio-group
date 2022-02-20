@@ -8,7 +8,8 @@ use App\Models\Main;
 class Pagecontroller extends Controller
 {
     public function index(){
-        return view('pages.index');
+        $main = Main::first();
+        return view('pages.index', compact('main'));
     }
 
     public function dashboard(){
