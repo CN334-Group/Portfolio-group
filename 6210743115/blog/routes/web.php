@@ -17,6 +17,9 @@ Route::get('/', [App\Http\Controllers\Pagecontroller::class, 'index'])->name('ho
 Route::get('/admin/dashboard', [App\Http\Controllers\Pagecontroller::class, 'dashboard'])->name('admin.dashboard');
 Route::get('/admin/main', [App\Http\Controllers\MainPagesController::class, 'index'])->name('admin.main');
 Route::put('/admin/main', [App\Http\Controllers\MainPagesController::class, 'update'])->name('admin.main.update');
+Route::get('/admin/services/create', [App\Http\Controllers\ServicePagesController::class, 'create'])->name('admin.services.create');
+Route::post('/admin/services/create', [App\Http\Controllers\ServicePagesController::class, 'store'])->name('admin.services.store');
+
 
 Auth::routes();
 
