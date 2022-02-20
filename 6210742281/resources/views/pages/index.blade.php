@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top">M Irsyad Portfolio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -36,11 +36,11 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
+        <header class="masthead" style="background-image: url(<?php echo $main->bc_img ?>)">
             <div class="container">
-                <div class="masthead-subheading">Welcome To M Irsyad Website!</div>
-                <div class="masthead-heading text-uppercase">I'm Software Engineer</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+                <div class="masthead-subheading">{{$main->sub_title}}</div>
+                <div class="masthead-heading text-uppercase">{{$main->title}}</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="{{url($main->resume)}}">Discover Me More</a>
             </div>
         </header>
         <!-- Services-->
