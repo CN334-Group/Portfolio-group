@@ -13,4 +13,8 @@ class Pagecontroller extends Controller
     public function dashboard(){
         return view('pages.dashboard');
     }
+
+    public function Main(){
+        return view('pages.main');
+    }
 }

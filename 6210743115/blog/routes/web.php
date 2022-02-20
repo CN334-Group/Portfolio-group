@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\Pagecontroller::class, 'index'])->name('home');
 Route::get('/admin/dashboard', [App\Http\Controllers\Pagecontroller::class, 'dashboard'])->name('admin.dashboard');
+Route::get('/admin/main', [App\Http\Controllers\Pagecontroller::class, 'main'])->name('admin.main');
 
 Auth::routes();
 
