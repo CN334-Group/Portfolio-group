@@ -28,7 +28,7 @@
                             <input type="text" class="form-control" id="title" name="title" value="{{ $main->title }}">
                         </div>
                         <div class="mb-5">
-                            <label for="title">
+                            <label for="sub_title">
                                 <h4>Sub Title</h4>
                             </label>
                             <input type="text" class="form-control" id="sub_title" name="sub_title"

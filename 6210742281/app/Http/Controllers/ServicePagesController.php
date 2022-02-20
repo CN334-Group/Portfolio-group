@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Service;
+use Illuminate\Http\Request;
 
 class ServicePagesController extends Controller
 {
@@ -12,10 +12,9 @@ class ServicePagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function list()
+    public function index()
     {
-        $services = Service::all();
-        return view('pages.services.list', compact('services'));
+        //
     }
 
     /**
@@ -39,17 +38,17 @@ class ServicePagesController extends Controller
         $this->validate($request, [
             'icon' => 'required|string',
             'title' => 'required|string',
-            'description' => 'required|string',
+            'descriprion' => 'required|string',
         ]);
 
         $services = new Service;
         $services->icon = $request->icon;
         $services->title = $request->title;
-        $services->description = $request->description;
+        $services->descriprion = $request->descriprion;
 
         $services->save();
 
-        return redirect()->route('pages.services.create')->with('success', "Main Page data has been updates successfully");
+        return redirect()->route('admin.services.create')->with('success', 'New Service Create Successfully');
     }
 
     /**
