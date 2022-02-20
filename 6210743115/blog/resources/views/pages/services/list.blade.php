@@ -11,9 +11,10 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Icon</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -21,9 +22,24 @@
                         @foreach ($services as $service)
                             <tr>
                                 <th scope="row">{{$service->id}}</th>
-                                <td>{{$service->icon}}</th>
-                                <td>{{$service->title}}</th>
-                                <td>{{$service->description}}</th>
+                                <td>{{$service->icon}}</td>
+                                <td>{{$service->title}}</td>
+                                <td>{{Str::limit(strip_tags($service->description), 50)}}</td>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <a href="{{route('admin.services.edit' , $service->id)}}" class="btn btn-primary">Edit</a>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <form action="{{route('admin.services.destroy', $service->id)}}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input type="submit" name="submit" value="Delete" class="btn btn-danger"></input>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
+
                             </tr>
                         @endforeach
                     @endif

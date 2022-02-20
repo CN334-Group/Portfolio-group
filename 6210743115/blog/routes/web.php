@@ -20,6 +20,9 @@ Route::put('/admin/main', [App\Http\Controllers\MainPagesController::class, 'upd
 Route::get('/admin/services/create', [App\Http\Controllers\ServicePagesController::class, 'create'])->name('admin.services.create');
 Route::post('/admin/services/create', [App\Http\Controllers\ServicePagesController::class, 'store'])->name('admin.services.store');
 Route::get('/admin/services/list', [App\Http\Controllers\ServicePagesController::class, 'list'])->name('admin.services.list');
+Route::get('/admin/services/edit/{id}', [App\Http\Controllers\ServicePagesController::class, 'edit'])->name('admin.services.edit');
+Route::post('/admin/services/update/{id}', [App\Http\Controllers\ServicePagesController::class, 'update'])->name('admin.services.update');
+Route::delete('/admin/services/destroy/{id}', [App\Http\Controllers\ServicePagesController::class, 'destroy'])->name('admin.services.destroy');
 
 
 Auth::routes();
