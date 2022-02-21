@@ -39,7 +39,7 @@ class ServicePagesController extends Controller
         $this->validate($request, [
             'icon' => 'required|string',
             'title' => 'required|string',
-            'description' => 'required|string',
+            'description' => 'required|string', 
         ]);
 
         $services = new Service;
@@ -49,7 +49,7 @@ class ServicePagesController extends Controller
 
         $services->save();
 
-        return redirect()->route('pages.services.create')->with('success', "Main Page data has been updates successfully");
+        return redirect()->route('admin.services.create')->with('success','New Service Created Successfully');
     }
 
     /**
@@ -71,7 +71,8 @@ class ServicePagesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $service = Service::find($id);
+        return view('pages.services.edit', compact('service'));
     }
 
     /**
@@ -83,7 +84,20 @@ class ServicePagesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $this->validate($request, [
+            'icon' => 'required|string',
+            'title' => 'required|string',
+            'description' => 'required|string',
+        ]);
+
+        $services = Service::find($id);
+        $services->icon = $request->icon;
+        $services->title = $request->title;
+        $services->description = $request->description;
+
+        $services->save();
+
+        return redirect()->route('admin.services.list')->with('success', "Service updates successfully");
     }
 
     /**
@@ -94,6 +108,10 @@ class ServicePagesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $services = Service::find($id);
+
+        $services->delete();
+
+        return redirect()->route('admin.services.list')->with('success', "Service deleted successfully");
     }
 }
