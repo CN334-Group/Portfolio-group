@@ -10,20 +10,37 @@
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Icon</th>
+                        <th scope="col">Level of education</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     @if (count($services) > 0)
                         @foreach ($services as $service)
                             <tr>
-                                <th scope="row">{{$service->id}}</th>
-                                <td>{{$service->icon}}</td>
-                                <td>{{$service->title}}</td>
-                                <td>{{$service->descriprion}}</td>
+                                <th scope="row">{{ $service->id }}</th>
+                                <td>{{ $service->icon }}</td>
+                                <td>{{ $service->title }}</td>
+                                <td>{{ Str::limit(strip_tags($service->descriprion), 40) }}</td>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <a href="{{ route('admin.services.edit', $service->id) }}"
+                                                class="btn btn-primary">Edit</a>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <form action="{{ route('admin.services.destroy', $service->id) }}"
+                                                method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input type="submit" name="submit" value="Delete" class="btn btn-danger">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                         @endforeach
                     @endif
