@@ -58,7 +58,7 @@
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <div class="row text-center">
-                    <video width="854" height="480" controls>
+                    <video width="854" height="480" controls muted>
                         <source src="assets/img/vdo/myvdo.mp4">
                     </video>
                 </div>
