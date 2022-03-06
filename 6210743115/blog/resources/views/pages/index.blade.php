@@ -30,10 +30,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">SKILLS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">EXPERIENCE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -322,7 +322,7 @@
                     <!-- <div class="col-lg-4 text-lg-start" style='padding-bottom: 10px; padding-left: 28px'>Copyright &copy; 6210743115 Portfolio Website 2022</div> -->
                     <div class="col-lg-0 text-lg-start">
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=100002736994582" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-start" style='padding-top: 18px; padding-left: 23px'>Copyright &copy; 6210743115 Portfolio Website 2022</div>
