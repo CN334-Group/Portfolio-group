@@ -8,11 +8,14 @@
         <title>Agency - Start Bootstrap Theme</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     </head>
@@ -20,7 +23,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.png" alt="..." style='width: 180%; height: 40px'/></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -47,8 +50,8 @@
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">SKILLS</h2>
+                    <h3 class="section-subheading text-muted">What I can do.</h3>
                 </div>
                 <div class="row text-center">
                     @if (count($services) > 0)
@@ -56,7 +59,7 @@
                             <div class="col-md-4">
                                 <span class="fa-stack fa-4x">
                                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                    <i class="<?php echo $service->icon;?> fa-stack-1x fa-inverse"></i>
+                                    <i class="<?php echo $service->icon;?> fa-stack-1x"></i>
                                 </span>
                                 <h4 class="my-3">{{$service->title}}</h4>
                                 <p class="text-muted">{{$service->description}}</p>
@@ -70,8 +73,8 @@
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">EXPERIENCE</h2>
+                    <h3 class="section-subheading text-muted">What I've done before.</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -171,8 +174,8 @@
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">ABOUT</h2>
+                    <h3 class="section-subheading text-muted">My journey form the start.</h3>
                 </div>
                 <ul class="timeline">
                     <li>
@@ -218,18 +221,18 @@
                     <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
-                                Be Part
+                                My journey
                                 <br />
-                                Of Our
+                                still
                                 <br />
-                                Story!
+                                going!
                             </h4>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <!-- Clients-->
+        <!-- Clients
         <div class="py-5">
             <div class="container">
                 <div class="row align-items-center">
@@ -247,13 +250,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">CONTACT</h2>
+                    <h3 class="section-subheading text-muted">Direct contact from website by email</h3>
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
                 <!-- * * SB Forms Contact Form * *-->
@@ -316,16 +319,17 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2021</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
+                    <!-- <div class="col-lg-4 text-lg-start" style='padding-bottom: 10px; padding-left: 28px'>Copyright &copy; 6210743115 Portfolio Website 2022</div> -->
+                    <div class="col-lg-0 text-lg-start">
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <div class="col-lg-4 text-lg-end">
+                    <div class="col-lg-4 text-lg-start" style='padding-top: 18px; padding-left: 23px'>Copyright &copy; 6210743115 Portfolio Website 2022</div>
+                    <!-- <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
                         <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </footer>
