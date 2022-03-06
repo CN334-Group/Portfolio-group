@@ -87,8 +87,8 @@
                                 <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Threads</div>
-                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                                <div class="portfolio-caption-heading">Server admin</div>
+                                <div class="portfolio-caption-subheading text-muted">".............."</div>
                             </div>
                         </div>
                     </div>
@@ -102,8 +102,8 @@
                                 <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Explore</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                                <div class="portfolio-caption-heading">Applications development</div>
+                                <div class="portfolio-caption-subheading text-muted">".............."</div>
                             </div>
                         </div>
                     </div>
@@ -117,8 +117,8 @@
                                 <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Finish</div>
-                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                                <div class="portfolio-caption-heading">Documents</div>
+                                <div class="portfolio-caption-subheading text-muted">".............."</div>
                             </div>
                         </div>
                     </div>
@@ -132,8 +132,8 @@
                                 <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lines</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding</div>
+                                <div class="portfolio-caption-heading">Backend</div>
+                                <div class="portfolio-caption-subheading text-muted">".............."</div>
                             </div>
                         </div>
                     </div>
@@ -147,8 +147,8 @@
                                 <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Southwest</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                                <div class="portfolio-caption-heading">Frontend</div>
+                                <div class="portfolio-caption-subheading text-muted">".............."</div>
                             </div>
                         </div>
                     </div>
@@ -162,8 +162,8 @@
                                 <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Window</div>
-                                <div class="portfolio-caption-subheading text-muted">Photography</div>
+                                <div class="portfolio-caption-heading">Web-app Dev</div>
+                                <div class="portfolio-caption-subheading text-muted">".............."</div>
                             </div>
                         </div>
                     </div>
