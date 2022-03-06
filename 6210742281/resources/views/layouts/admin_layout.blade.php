@@ -53,12 +53,14 @@
                             Dashboard
                         </a>
 
+                        {{-- Main Dashboard --}}
                         <a class="nav-link" href="{{ route('admin.main') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                             Main
                         </a>
 
                         <div class="sb-sidenav-menu-heading">Interface</div>
+                        {{-- Education Dashboard --}}
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -73,6 +75,7 @@
                             </nav>
                         </div>
 
+                        {{-- Porfolio Dashboard --}}
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts2">
                             <div class="sb-nav-link-icon"><i class="fas fa-images"></i></div>
@@ -87,10 +90,20 @@
                             </nav>
                         </div>
 
-                        <a class="nav-link" href="#">
+                        {{-- Experience Dashboard --}}
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts3">
                             <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                            About
+                            Experience
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{ route('admin.experiences.create') }}">Create</a>
+                                <a class="nav-link" href="{{ route('admin.experiences.list') }}">List</a>
+                            </nav>
+                        </div>
 
                         <a class="nav-link" href="#">
                             <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>

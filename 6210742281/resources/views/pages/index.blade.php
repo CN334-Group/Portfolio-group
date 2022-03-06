@@ -8,12 +8,15 @@
     <meta name="author" content="" />
     <title>M Irsyad Website</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/myportlogo.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
 </head>
@@ -83,15 +86,17 @@
                         <div class="col-lg-4 col-sm-6 mb-4">
                             <!-- Portfolio item 1-->
                             <div class="portfolio-item">
-                                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal<?php echo $portfolio->id?>">
+                                <a class="portfolio-link" data-bs-toggle="modal"
+                                    href="#portfolioModal<?php echo $portfolio->id; ?>">
                                     <div class="portfolio-hover">
                                         <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                     </div>
-                                    <img class="img-fluid" src="{{url($portfolio->small_image)}}" alt="..." />
+                                    <img class="img-fluid" src="{{ url($portfolio->small_image) }}" alt="..." />
                                 </a>
                                 <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">{{$portfolio->title}}</div>
-                                    <div class="portfolio-caption-subheading text-muted">{{$portfolio->sub_title}}</div>
+                                    <div class="portfolio-caption-heading">{{ $portfolio->title }}</div>
+                                    <div class="portfolio-caption-subheading text-muted">{{ $portfolio->sub_title }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -107,69 +112,26 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">experience</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h3 class="section-subheading text-muted"></h3>
             </div>
             <ul class="timeline">
-                <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg"
-                            alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4>2009-2011</h4>
-                            <h4 class="subheading">Our Humble Beginnings</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-                                voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg"
-                            alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4>March 2011</h4>
-                            <h4 class="subheading">An Agency is Born</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-                                voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg"
-                            alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4>December 2015</h4>
-                            <h4 class="subheading">Transition to Full Service</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-                                voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg"
-                            alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4>July 2020</h4>
-                            <h4 class="subheading">Phase Two Expansion</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut
-                                voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero
-                                unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                        </div>
-                    </div>
-                </li>
+                @if (count($experiences) > 0)
+                    @foreach ($experiences as $experience)
+                        <li>
+                            <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                    src="{{ url($experience->big_image) }}" alt="..." /></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>{{ $experience->date }}</h4>
+                                    <h4 class="subheading">{{ $experience->title }}</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">{{ $experience->description }}</p>
+                                </div>
+                            </div>
+                        </li>
+                    @endforeach
+                @endif
                 <li class="timeline-inverted">
                     <div class="timeline-image">
                         <h4>
@@ -186,7 +148,7 @@
     </section>
 
     <!-- Clients-->
-    <div class="py-5">
+    {{-- <div class="py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-3 col-sm-6 my-3">
@@ -207,7 +169,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+
     <!-- Contact-->
     <section class="page-section" id="contact">
         <div class="container">
@@ -286,7 +249,7 @@
     <footer class="footer py-4">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2021</div>
+                <div class="col-lg-4 text-lg-start">Copyright &copy; M Irsyad Website 2021</div>
                 <div class="col-lg-4 my-3 my-lg-0">
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
@@ -301,7 +264,8 @@
     </footer>
     <!-- Portfolio Modals-->
     <!-- Portfolio item 1 modal popup-->
-    <div class="portfolio-modal modal fade" id="portfolioModal<?php echo $portfolio->id?>" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal<?php echo $portfolio->id; ?>" tabindex="-1" role="dialog"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
@@ -311,11 +275,12 @@
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project details-->
-                                <h2 class="text-uppercase">{{$portfolio->title}}</h2>
-                                <p class="item-intro text-muted">{{$portfolio->sub_title}}</p>
-                                <img class="img-fluid d-block mx-auto" src="{{url($portfolio->big_image)}}" alt="..." />
-                                <p>{{$portfolio->descriprion}}</p>
-                                
+                                <h2 class="text-uppercase">{{ $portfolio->title }}</h2>
+                                <p class="item-intro text-muted">{{ $portfolio->sub_title }}</p>
+                                <img class="img-fluid d-block mx-auto" src="{{ url($portfolio->big_image) }}"
+                                    alt="..." />
+                                <p>{{ $portfolio->descriprion }}</p>
+
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
                                     type="button">
                                     <i class="fas fa-times me-1"></i>

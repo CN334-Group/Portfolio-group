@@ -32,6 +32,13 @@ Route::prefix('admin')->group(function(){
     Route::get('/portfolios/edit/{id}', 'PortfolioPagesController@edit')->name('admin.portfolios.edit');
     Route::post('/portfolios/update/{id}', 'PortfolioPagesController@update')->name('admin.portfolios.update');
     Route::delete('/portfolios/destroy/{id}', 'PortfolioPagesController@destroy')->name('admin.portfolios.destroy');
+
+    Route::get('/experiences/create', 'ExperiencePagesController@create')->name('admin.experiences.create');
+    Route::put('/experiences/create', 'ExperiencePagesController@store')->name('admin.experiences.store');
+    Route::get('/experiences/list', 'ExperiencePagesController@list')->name('admin.experiences.list');
+    Route::get('/experiences/edit/{id}', 'ExperiencePagesController@edit')->name('admin.experiences.edit');
+    Route::post('/experiences/update/{id}', 'ExperiencePagesController@update')->name('admin.experiences.update');
+    Route::delete('/experiences/destroy/{id}', 'ExperiencePagesController@destroy')->name('admin.experiences.destroy');
 });
 
 
