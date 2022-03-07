@@ -60,7 +60,7 @@
 
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                            Service
+                            Education
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
@@ -84,7 +84,7 @@
 
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts3">
                             <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                            About
+                            Experience
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
@@ -94,10 +94,10 @@
                             </nav>
                         </div> 
 
-                        <a class="nav-link" href="#">
+                        {{-- <a class="nav-link" href="#">
                             <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
                             Contact
-                        </a>
+                        </a> --}}
                     </div>
 
 

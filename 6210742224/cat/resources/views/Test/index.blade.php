@@ -55,7 +55,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Introduction</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">"Let's start with my video introduction"</h3>
                 </div>
                 <div class="row text-center">
                     <video width="854" height="480" controls muted>
@@ -66,12 +66,12 @@
         </section>
 
 
-        <!-- Services-->
+        <!--Education-->
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Education</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">"Education journey"</h3>
                 </div>
                 <div class="row text-center">
                     @if (count($services) > 0)
@@ -79,7 +79,7 @@
                             <div class="col-md-4">
                                 <span class="fa-stack fa-4x">
                                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                    <i class="<?php echo $service->icon;?> fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                                    <i class="<?php echo $service->icon;?>"></i>
                                 </span>
                                 <h4 class="my-3">{{$service->title}}</h4>
                                 <p class="text-muted">{{$service->description}}</p>
@@ -100,7 +100,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">"Someone said that this is an innovation portfolio"</h3>
                 </div>
                 <div class="row">
                     @if (count($portfolios) > 0)
@@ -133,7 +133,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">EXPERIENCE</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">"We should sit down and listen to my story"</h3>
                 </div>
                 <ul class="timeline">
                     @if (count($abouts) > 0)
@@ -184,12 +184,18 @@
         <!-- Clients-->
         <div class="py-5">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center" align="middle">
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img width="150" height="150" src="assets/img/logos/SCG.svg" alt="..."/></a>
+                        <a href="#!"><img width="80" height="80" src="assets/img/logos/NZ.svg" alt="..."/></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." /></a>
+                        <a href="#!"><img width="90" height="90" src="assets/img/logos/YGA.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img width="150" height="150" src="assets/img/logos/SCG.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img width="80" height="80" src="assets/img/logos/DO.svg" alt="..." /></a>
                     </div>
                 </div>
             </div>
@@ -264,8 +270,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2021</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        {{-- <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a> --}}
                         <a class="btn btn-dark btn-social mx-2" href="http://www.linkedin.com/in/natdanai-lornimitdee"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
@@ -275,13 +281,6 @@
                 </div>
             </div>
         </footer>
-
-
-
-
-
-
-
 
 
 
