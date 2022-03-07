@@ -19,7 +19,6 @@ class PagesController extends Controller
     }
 
 
-
     public function dashboard(){
         return view('Test.dashboard');
     }
