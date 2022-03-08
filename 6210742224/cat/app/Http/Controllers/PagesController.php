@@ -18,11 +18,6 @@ class PagesController extends Controller
         return view('Test.index', compact('main','services','portfolios','abouts'));
     }
 
-
-    public function dashboard(){
-        return view('Test.dashboard');
-    }
-
     public function main(){
         return view('Test.main');
     }
