@@ -58,11 +58,8 @@
                     <h2 class="section-heading text-uppercase">Introduction</h2>
                     <h3 class="section-subheading text-muted">"Let's start with my video introduction"</h3>
                 </div>
-                <div class="row text-center">
-                    <video width="854" height="480" controls muted>
-                        <source src="assets/img/vdo/myvdo.mp4">
-                    </video>
-                </div>
+                <iframe style="display: block; margin: auto;" width="854" height="480" src="https://www.youtube.com/embed/ITIwm4tcloE">
+                </iframe>
             </div>
         </section>
 
