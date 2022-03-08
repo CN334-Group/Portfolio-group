@@ -11452,6 +11452,23 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
+
+#services{
+  background-size: cover;
+}
+
+#services .fa-stack fa-4x{
+  color: #0dcaf0;
+}
+
+#about{
+  background-size: cover;
+}
+
+#portfolio{
+  background-size: cover;
+}
+
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;

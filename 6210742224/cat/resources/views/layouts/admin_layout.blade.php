@@ -94,10 +94,10 @@
                             </nav>
                         </div> 
 
-                        {{-- <a class="nav-link" href="#">
+                        <a class="nav-link" href="#">
                             <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
                             Contact
-                        </a> --}}
+                        </a>
                     </div>
 
 
